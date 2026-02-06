@@ -1,17 +1,15 @@
 # Ontology Conventions
 
-> Extracted from: *DFO Salmon Ontology Conventions – Compliance and Improvement Analysis* (downloaded markdown)
->
-> This page includes the **conventions guide content** and omits the earlier analysis/preamble where possible.
+> Extracted from: *DFO Salmon Ontology Conventions – Compliance and Improvement Analysis* (downloaded markdown) > > This page includes the **conventions guide content** and omits the earlier analysis/preamble where possible.
 
 (This rewritten guide integrates the analysis and recommendations above. It is structured for clarity, with minimal
 
-redundancy, and aligns with OWL 2 DL, OBO Foundry principles, and contributor usability. All key modeling rules
+redundancy, and aligns with OWL 2 DL, OBO Foundry principles, and contributor usability. All key modeling rules
 
 are retained.)
 
 
-How
+## How
 
 If you’re an experienced contributor looking for a quick reference, this section is for you. It summarizes the most
 
@@ -26,7 +24,7 @@ SKOS concepts: skos:prefLabel "Preferred Name"@en
 
 OWL classes/properties: IAO:0000115 "Concise definition of the term."@en
 
-SKOS   concepts:
+SKOS concepts:
 
 skos:definition   "Concise   definition   of   the   concept."@en
 
@@ -85,7 +83,7 @@ SonarCounting
 Type2
 
 
-Rationale:
+### Rationale
 
 salmon.ttl
 
@@ -115,7 +113,7 @@ hasMember
 
 :FraserCUCoho
 
-Example:
+### Example
 hasMemberStock :FraserCohoStock
 
 :BCInteriorMU hasMemberCU :FraserCUCoho
@@ -124,7 +122,7 @@ hasMemberStock :FraserCohoStock
 
 hasMember :FraserCohoStock
 
-Tip:
+### Tip
 
 a owl:TransitiveProperty
 
@@ -147,7 +145,7 @@ dfo:usesMethod
 
 (These properties are defined in our ontology or reused; see Measurement Patterns for details.)
 
-Example:
+### Example
 EscapementMeasurement
 
 rdfs:subClassOf sosa:Observation
@@ -156,7 +154,7 @@ rdfs:subClassOf sosa:Observation
 
 rdf:type iop:Variable
 
-Example:
+### Example
 
 RO:0002351 (has member)
 
@@ -177,14 +175,14 @@ EscapementSurveyEvent
 
 dfo:measuredVisits
 
-Example:
+### Example
 dfo:usesEnumerationMethod
 
 dfo:measuredVisits ≥
 
 EscapementSurveyEvent
 
-Bottom line:
+### Bottom line
 
 ENVO:lake
 
@@ -324,7 +322,7 @@ skos:inScheme :EscapementMethodScheme ;
 
 rdfs:isDefinedBy <https://w3id.org/gcdfo/salmon> .
 
-In a separate data file (e.g.,  data/escapement-2022.ttl ):
+In a separate data file (e.g., data/escapement-2022.ttl ):
 
 # Individual survey event in 2022 using snorkel method
 
@@ -396,7 +394,7 @@ Female
 
 Male
 
-Red   Zone
+Red Zone
 
 subClassOf
 
@@ -453,7 +451,7 @@ rdfs:subClassOf
 SpawnerEstimationSurvey
 
 
-SpawnerEstimationSurvey   subClassOf   usesMethod   some   EnumerationMethod
+SpawnerEstimationSurvey subClassOf usesMethod some EnumerationMethod
 
 owl:disjointWith
 
@@ -613,7 +611,7 @@ owl:SymmetricProperty
 
 dfo:hasBroodYear
 
-:hasBroodYear   a
+:hasBroodYear a
 
 :hasParent
 
@@ -705,7 +703,7 @@ dcterms:source <https://dwc.tdwg.org/terms/#dwc:eventID> .
 DwC or PROV as inspiration
 
 
-(Note:  prov:used  has domain prov:Activity and range prov:Entity. By subProperty, we imply our Observation is
+(Note: prov:used has domain prov:Activity and range prov:Entity. By subProperty, we imply our Observation is
 
 a kind of Activity using an Event (Entity). That’s a bit semantically odd because one might think Observation is an
 
@@ -730,7 +728,7 @@ owl:DatatypeProperty .
 
 rdfs:label
 
-:yourDataProp   a
+:yourDataProp a
 
 dfo:proportion rdfs:label
 
@@ -793,7 +791,7 @@ rdfs:comment
 
 :proportion rdfs:comment
 
-"Expected   value   between   0   and   1."@en.
+"Expected value between 0 and 1."@en.
 
 rdfs:label
 
@@ -1073,7 +1071,7 @@ skos:editorialNote
 
 rdfs:comment
 
-“This   class   is   provisional,   pending   review   by   WG.”
+“This class is provisional, pending review by WG.”
 skos:editorialNote "Provisional term - definition to be finalized."@en .
 
 IAO:0000112
@@ -1207,7 +1205,7 @@ escapement"@en
 
 rdfs:label
 
-"Salmon   escapement"
+"Salmon escapement"
 
 "Salmon
 
