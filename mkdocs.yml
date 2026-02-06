@@ -20,4 +20,12 @@ markdown_extensions:
 
 nav:
   - Home: index.md
-  - Conventions: conventions.md
+  - Conventions:
+      - Overview: conventions/index.md
+      - Quick reference: conventions/quick-reference.md
+      - Schema vs data: conventions/schema-vs-data.md
+      - OWL classes: conventions/owl-classes.md
+      - OWL properties: conventions/owl-properties.md
+      - SKOS vocabularies: conventions/skos-vocabularies.md
+      - Provenance & maintenance: conventions/provenance-maintenance.md
+      - Full (raw): conventions/full.md
