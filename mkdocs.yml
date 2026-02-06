@@ -1,0 +1,23 @@
+site_name: DFO Salmon Ontology Docs
+site_description: Documentation and conventions for the DFO salmon ontology.
+repo_url: https://github.com/dfo-pacific-science/salmon-ontology-docs
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tabs
+    - content.action.edit
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.superfences
+  - pymdownx.details
+
+nav:
+  - Home: index.md
+  - Conventions: conventions.md
